@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-    --base-color: #00d13f;
+    --base-color: #182c1d;
     --main-color: rgb(53, 238, 53);
     --text-color: rgb(172, 240, 195);
 }
 *{
     margin: 0;
     padding: 0;
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
     background-color: var(--base-color);
@@ -51,7 +54,7 @@ body{
     width: 0;
     height: 3px;
     border-radius: 50px;
-    background: var(--main-color);
+    background: var(--base-color);
     bottom: 0;
     left: 0;
     transition: 0.3s ease;
@@ -71,7 +74,7 @@ body{
 .main-content{
     width: 100%;
     height: 100vh;
-    background-image:linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,.7)), url(/images/home\ img.jpg);
+    background-image:linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,.7)), url(/images/home2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
@@ -140,24 +143,154 @@ body{
 .items{
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    overflow-y: scroll;
+    gap: 30px;
+    margin-left: 10px;
+    overflow: hidden;
 }
 .item{
-    width: 300px;
-    height: 200px;
-    padding: 30px;
+    padding: 50px;
     border: 1px solid white;
     display: flex;
     justify-content: center;
     background: rgb(252, 255, 254);
+    box-shadow: 10px 0px 30px rgba(46, 40, 40, 0.767);
 
 }
 .item img{
     width: 200px;
     height: 200px;
     background-color: white;
-    box-shadow: 10px 0px 30px rgba(46, 40, 40, 0.767);
     border-radius: 10px;
 }
 
+/* ---------- About --------- */
+#about{
+    height: 100%;
+    padding: 78px 35px;
+}
+#about img{
+    height: auto;
+    width: 520px;
+    border: 10px solid white;
+    border-radius: 15px;
+    box-shadow: -10px 10px 60px rgba(0, 0, 0, .3);
+}
+#about .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+#about .container .phara{
+    width: 500px;
+}
+#about .container .phara h1{
+    font-size: 80px;
+    color: whitesmoke;
+}
+#about .container .phara p{
+    font-size: 25px;
+    color: wheat;
+    font-weight: 500;
+}
+#about .container .phara p span{
+    color: var(--main-color);
+}
+#products{
+    position: relative;
+}
+.product-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin: 35px 0px 10px 45% ;
+  }
+
+.autoshow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(80% 5%);
+}
+@keyframes autoShowAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3s);
+    }to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    
+}
+
+
+
+
+.contact-form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3px 3px 35px 3px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--base-color);
+    position: relative;
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 20px;
+    height: 150px;
+    text-align: center;
+    padding-top: 35px;
+    background-color: #4caf50;
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 50%;
+    padding-left: 25%;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: var(--main-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.contact-form button:hover {
+    background-color: #3e8e41;
+}
