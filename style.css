@@ -27,6 +27,13 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #182c1d;
+}
+.stiky-nav{
+    background-color: #71eb9079;
+    z-index: 10000;
+    position: sticky;
+    top: ;
 }
 .navbar ul{
     display: flex;
@@ -142,10 +149,8 @@ body{
 }
 .items{
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-left: 10px;
-    overflow: hidden;
+    justify-content: space-around;
+    gap: 20px;
 }
 .item{
     padding: 50px;
